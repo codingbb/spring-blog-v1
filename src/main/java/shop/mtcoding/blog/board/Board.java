@@ -1,4 +1,4 @@
-package shop.mtcoding.blog.user;
+package shop.mtcoding.blog.board;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -6,26 +6,19 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Data
+@Data   //getter, setter, toString
 @Entity
-@Table(name = "user_tb")
-public class User {
+@Table(name = "board_tb")
+public class Board {
     @Id //프라이머리 키
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_incrediment
     private int id;
-
-    @Column(unique = true)
-    private String username;
-
-    @Column(length = 60, nullable = false)
-    private String password;
-    private String email;
-
-//    private String hobby;
+    private String title;
+    private String content;
+    private int userId;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
 
+
 }
-
-
