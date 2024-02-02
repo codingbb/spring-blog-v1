@@ -1,16 +1,15 @@
 package shop.mtcoding.blog.user;
 
+import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
-
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
 @Table(name = "user_tb")
 public class User {
-    @Id //프라이머리 키
+    @Id//프라이머리 키
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_incrediment
     private int id;
 
