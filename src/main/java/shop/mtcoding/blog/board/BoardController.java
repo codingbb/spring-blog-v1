@@ -20,7 +20,7 @@ public class BoardController {
         return boardRepository.findById(id);
     }
 
-    @GetMapping({ "/", "/board" })
+    @GetMapping({ "/", "/board"})
     public String index() {
 //        User sessionUser = (User) session.getAttribute("sessionUser");
 //        if (sessionUser == null) {
